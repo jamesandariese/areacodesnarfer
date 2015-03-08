@@ -3,7 +3,7 @@ all: all_states areacodesnarfer
 areacodesnarfer: areacodesnarfer.go
 	go build
 
-areacodesnarfer.go: upper.go.in lower.go.in
+areacodesnarfer.go: upper.go.in lower.go.in all_states
 	bash buildmaingo.sh > areacodesnarfer.go
 
 clean:

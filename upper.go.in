@@ -1,9 +1,10 @@
 package main
 
 import (
-    "fmt"
-"bufio"
-"os"
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
 )
 
 var tab = map[string]string{
