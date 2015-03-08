@@ -1,0 +1,9 @@
+package main
+
+import (
+    "fmt"
+"bufio"
+"os"
+)
+
+var tab = map[string]string{

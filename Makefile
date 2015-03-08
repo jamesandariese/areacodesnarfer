@@ -1,4 +1,15 @@
-all: 100.state 101.state 102.state 103.state 104.state 105.state 106.state 107.state \
+all: all_states areacodesnarfer
+
+areacodesnarfer: areacodesnarfer.go
+	go build
+
+areacodesnarfer.go: upper.go.in lower.go.in
+	bash buildmaingo.sh > areacodesnarfer.go
+
+clean:
+	rm -f *.state areacodesnarfer.go areacodesnarfer cookies
+
+all_states: 100.state 101.state 102.state 103.state 104.state 105.state 106.state 107.state \
 	108.state 109.state 110.state 111.state 112.state 113.state 114.state 115.state \
 	116.state 117.state 118.state 119.state 120.state 121.state 122.state 123.state \
 	124.state 125.state 126.state 127.state 128.state 129.state 130.state 131.state \
